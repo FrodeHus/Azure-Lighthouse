@@ -29,25 +29,21 @@
                 "description": "Specify an array of objects, containing tuples of Azure Active Directory principalId, a Azure roleDefinitionId, and an optional principalIdDisplayName. The roleDefinition specified is granted to the principalId in the provider's Active Directory and the principalIdDisplayName is visible to customers."
             },
             "defaultValue": [
-                {
-                    "principalId": "8f19aaaf-32bd-466b-ad93-ba8e4d313be0",
+                { 
+                    "principalId": "8f19aaaf-32bd-466b-ad93-ba8e4d313be0", 
                     "roleDefinitionId": "acdd72a7-3385-48ef-bd42-f606fba81ae7",
-                    "principalIdDisplayName": "NygmaSec Managed SOC"
-                },
-                {
-                    "principalId": "8f19aaaf-32bd-466b-ad93-ba8e4d313be0",
+                    "principalIdDisplayName": "NygmaSec Managed SOC" 
+                }, 
+                { 
+                    "principalId": "8f19aaaf-32bd-466b-ad93-ba8e4d313be0", 
                     "roleDefinitionId": "91c1777a-f3dc-4fae-b103-61d183457e46",
-                    "principalIdDisplayName": "NygmaSec Managed SOC"
+                    "principalIdDisplayName": "NygmaSec Managed SOC" 
                 },
                 {
                     "principalId": "8f19aaaf-32bd-466b-ad93-ba8e4d313be0",
                     "principalIdDisplayName": "NygmaSec Managed SOC",
-                    "roleDefinitionId": "18d7d88d-d35e-4fb5-a5c3-7773c20a72d9",
-                    "delegatedRoleDefinitionIds": [
-                        "b24988ac-6180-42a0-ab88-20f7382dd24c",
-                        "92aaf0da-9dab-42b6-94a3-d43ce8d16293"
-                    ]
-                }
+                    "roleDefinitionId": "92aaf0da-9dab-42b6-94a3-d43ce8d16293"
+                }  
             ]
         },
         "rgName": {

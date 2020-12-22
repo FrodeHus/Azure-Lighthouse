@@ -29,11 +29,7 @@
                 {
                     "principalId": "8f19aaaf-32bd-466b-ad93-ba8e4d313be0",
                     "principalIdDisplayName": "NygmaSec Managed SOC",
-                    "roleDefinitionId": "18d7d88d-d35e-4fb5-a5c3-7773c20a72d9",
-                    "delegatedRoleDefinitionIds": [
-                        "b24988ac-6180-42a0-ab88-20f7382dd24c",
-                        "92aaf0da-9dab-42b6-94a3-d43ce8d16293"
-                    ]
+                    "roleDefinitionId": "92aaf0da-9dab-42b6-94a3-d43ce8d16293"
                 }   
             ]
         }
