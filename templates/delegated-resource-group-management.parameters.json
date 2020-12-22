@@ -1,0 +1,41 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "mspOfferName": {
+            "value": "NygmaSec SOC"
+        },
+        "rgName": {
+            "value": "NygmaSec"
+        },
+        "mspOfferDescription": {
+            "value": "Managed Security Operations Center for Cloud Applications"
+        },
+        "managedByTenantId": {
+            "value": "46321e28-0b3f-4c90-855c-dc82f009eeb7"
+        },
+        "authorizations": {
+            "value": [
+                { 
+                    "principalId": "d5df914f-54bc-4f22-b308-4a81fa157dd9", 
+                    "roleDefinitionId": "acdd72a7-3385-48ef-bd42-f606fba81ae7",
+                    "principalIdDisplayName": "NygmaSec Managed SOC" 
+                }, 
+                { 
+                    "principalId": "d5df914f-54bc-4f22-b308-4a81fa157dd9", 
+                    "roleDefinitionId": "91c1777a-f3dc-4fae-b103-61d183457e46",
+                    "principalIdDisplayName": "NygmaSec Managed SOC" 
+                },
+                {
+                    "principalId": "d5df914f-54bc-4f22-b308-4a81fa157dd9",
+                    "principalIdDisplayName": "NygmaSec Managed SOC",
+                    "roleDefinitionId": "18d7d88d-d35e-4fb5-a5c3-7773c20a72d9",
+                    "delegatedRoleDefinitionIds": [
+                        "b24988ac-6180-42a0-ab88-20f7382dd24c",
+                        "92aaf0da-9dab-42b6-94a3-d43ce8d16293"
+                    ]
+                }   
+            ]
+        }
+    }
+}
