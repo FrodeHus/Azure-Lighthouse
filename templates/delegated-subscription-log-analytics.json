@@ -38,21 +38,7 @@
                     "principalId": "8f19aaaf-32bd-466b-ad93-ba8e4d313be0",
                     "principalIdDisplayName": "NygmaSec Managed SOC",
                     "roleDefinitionId": "73c42c96-874c-492b-b04d-ab87d138a893"
-                }
-            ]
-        },
-        "resourceGroups": {
-            "type": "array",
-            "metadata": {
-                "description": "Name(s) of existing resource groups containing log analytics workspaces"
-            },
-            "defaultValue": [
-                {
-                    "resourceGroupName": "test"
-                },
-                {
-                    "resourceGroupName": "test2"
-                }
+                }    
             ]
         }
     },
@@ -73,34 +59,14 @@
             }
         },
         {
-            "type": "Microsoft.Resources/deployments",
-            "apiVersion": "2018-05-01",
-            "name": "[concat('resourceGroupAssignment', copyIndex())]",
-            "resourceGroup": "[parameters('resourceGroups')[copyIndex()].resourceGroupName]",
-            "copy": {
-                "name": "deploymentCopy",
-                "count": "[length(parameters('resourceGroups'))]"
-            },
+            "type": "Microsoft.ManagedServices/registrationAssignments",
+            "apiVersion": "2019-09-01",
+            "name": "[variables('mspAssignmentName')]",
             "dependsOn": [
                 "[resourceId('Microsoft.ManagedServices/registrationDefinitions/', variables('mspRegistrationName'))]"
             ],
             "properties": {
-                "mode": "Incremental",
-                "template": {
-                    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
-                    "contentVersion": "1.0.0.0",
-                    "parameters": {},
-                    "resources": [
-                        {
-                            "type": "Microsoft.ManageServices/registrationAssignments",
-                            "apiVersion": "2019-06-01",
-                            "name": "[guid(parameters('resourceGroups')[copyIndex()].resourceGroupName)]",
-                            "properties": {
-                                "registrationefinitionId": "[resourceId('Microsoft.ManageServices/registrationDefinitions/', variables('mspRegistrationName'))]"
-                            }
-                        }
-                    ]
-                }
+                "registrationDefinitionId": "[resourceId('Microsoft.ManagedServices/registrationDefinitions/', variables('mspRegistrationName'))]"
             }
         }
     ],
