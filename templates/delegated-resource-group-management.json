@@ -92,11 +92,11 @@
                     "parameters": {},
                     "resources": [
                         {
-                            "type": "Microsoft.ManageServices/registrationAssignments",
+                            "type": "Microsoft.ManagedServices/registrationAssignments",
                             "apiVersion": "2019-06-01",
                             "name": "[guid(parameters('resourceGroups')[copyIndex()].resourceGroupName)]",
                             "properties": {
-                                "registrationefinitionId": "[resourceId('Microsoft.ManageServices/registrationDefinitions/', variables('mspRegistrationName'))]"
+                                "registrationDefinitionId": "[resourceId('Microsoft.ManagedServices/registrationDefinitions/', variables('mspRegistrationName'))]"
                             }
                         }
                     ]
